@@ -1,4 +1,4 @@
-%---------Masoud Mashhadi Rahim (9310084)------------------------------------
+%---------Himanshu Sharma (Air Standard Diesel Cycle)----------------
 
 clc
 clear all
@@ -7,7 +7,7 @@ close all
 a=input('Please enter 1 for default input data, 0 for arbitrary ones:');
 if a==1
 
-    %-------------------------Default Input Data---------------------
+%-------------------------Default Input Data---------------------
 
 %----------Engine Inputs------
 V=3;                      %Engine Displacement Volume(Litr)
@@ -82,7 +82,7 @@ end
 %--------Fuel Heating Value & Combustion Efficiency----
 M_C=(x*12)/((x*12)+(y));                           %Mass Fraction of Carbon In Fuel
 M_H=(y*0.68)/((x*12)+(y));                         %MODIFIED Mass Fraction of Hydrogen In Fuel
-FHV=((14600*M_C)+(62000*M_H))*2.326;               %Fuel Heating Value (kJ/kg) [Dulong’s formula]b=x/y;
+FHV=((14600*M_C)+(62000*M_H))*2.326;               %Fuel Heating Value (kJ/kg) [Dulongâ€™s formula]b=x/y;
 b=x/y;
 AF_s=(34.56*(b+4))/(12.011+(1.008*b));             %Stoichiometric Air/Fuel ratio (Heywood (5-3))
 lambda=AF/AF_s;
@@ -103,7 +103,7 @@ V_d=(V/N)/1000;                 %Displacement Volume (Cubic Meter)
 V_c=V_d/(r_c-1);                %Clearance Volume    (Cubic Meter)
 B=((4*V_d/pi*X)^(1/3))*100;     %Bore                (cm)
 S=B*X;                          %Stroke              (cm)
-A_p=(pi*(B^2))/4 ;              %Piston Area        (square cm)
+A_p=(pi*(B^2))/4 ;              %Piston Area         (square cm)
 
 %----State 1 (Start of Compression)-----
 T_1=(T_0)+273;                  %Temprature of Gas Mixture in Cylinder at State 1 (Deg K)
@@ -204,19 +204,19 @@ A = ['The Actual Air/Fuel Ratio is: ',num2str(AF)];
     disp(A)
     
 Z = ['The Stoichiometric Air/Fuel Ratio is: ',num2str(AF_s)];
-disp(Z)
+    disp(Z)
 
-T=['The Percent of Theoritical Air is: ',num2str(Th_Air)];
-disp(T)
+T = ['The Percent of Theoritical Air is: ',num2str(Th_Air)];
+    disp(T)
 
-E=['The Percent of Excess Air is: ',num2str(EAP)];
-disp(E)
+E = ['The Percent of Excess Air is: ',num2str(EAP)];
+    disp(E)
 
-Eff=['Total Combustion Efficiency is: ',num2str(eta_c)];
-disp(Eff)
+Eff = ['Total Combustion Efficiency is: ',num2str(eta_c)];
+      disp(Eff)
 
-HV=['Fuel Heating Value is: ',num2str(FHV), ' kJ/kg'];
-disp(HV)
+HV = ['Fuel Heating Value is: ',num2str(FHV), ' kJ/kg'];
+     disp(HV)
 
 disp('                                                                   ');
 disp('                                                                   ');
